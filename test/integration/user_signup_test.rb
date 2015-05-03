@@ -26,6 +26,7 @@ class UserSignupTest < ActionDispatch::IntegrationTest
                                             password_confirmation: "hellothere" }
     end
     assert_template 'users/show'
+    assert is_logged_in?
   end
   
   # Need a test for not creating duplicate user?
